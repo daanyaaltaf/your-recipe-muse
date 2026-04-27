@@ -234,10 +234,12 @@ function Index() {
                 </div>
 
                 <div className="flex flex-wrap gap-3">
-                  <Button asChild variant="default">
-                    <a href={result.youtubeUrl} target="_blank" rel="noreferrer">
-                      <Youtube className="h-4 w-4" /> Watch on YouTube
-                    </a>
+                  <Button
+                    type="button"
+                    variant="default"
+                    onClick={() => window.open(result.youtubeUrl, "_blank", "noopener,noreferrer")}
+                  >
+                    <Youtube className="h-4 w-4" /> Watch on YouTube
                   </Button>
                   <Button
                     variant="outline"
